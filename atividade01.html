@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplos</title>
+</head>
+
+<body>
+    <script>
+        var lista = []
+        var num1 = prompt("digite um numero: ");
+        var num2 = prompt("digite um numero: ");
+        var x = parseInt(num1);
+        var z = parseInt(num2);
+        inserir()
+
+        function inserir() {
+            lista.push(x);
+            lista.push(z);
+            console.log("numeros digitados: " + lista)
+            mostrar()
+        }
+        function verificar(a, b) {
+            if (a % b == 0) {
+                return (`${a} é multiplo de ${b}`);
+            }
+            else {
+                return ("nao são multiplos!");
+            }
+        }
+        function mostrar() {
+            console.log(verificar(lista[0], lista[1]))
+        }
+
+    </script>
+</body>
+
+</html>
