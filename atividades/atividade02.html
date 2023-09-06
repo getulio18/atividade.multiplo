@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprestimo bancario</title>
+</head>
+
+<body>
+    <script>
+        let valor = parseInt(prompt("digite um valor do emprestimo: "))
+        let parcelas = parseInt(prompt("quantidades de parcelas: "))
+
+        let pacelar = () => {
+            var jurosTotal = 20 / 100;
+            var juros = 2 / 100  ;
+            let valorTotal = parcelas + valor + valor * jurosTotal;
+            let dividir;
+            let total = 0;
+
+        
+            if (parcelas > 1) {
+
+                for (var i = 1; i <= parcelas; i++) {
+                    
+                    dividir = valorTotal / parcelas ;
+                    var taxa = dividir * juros * i;
+                    var mensal = (dividir + jurosTotal) - taxa;
+                    total += mensal;
+                    var mensagem = (`${i} parcela mensal: R$${mensal.toFixed(2)}`);
+                    var mensagem2 = (`será pago : ${total.toFixed(2)}`)
+                    console.log(mensagem,mensagem2)
+                }
+
+            }
+            else {
+                console.log("a vista: " + valorTotal)
+            }
+
+        }
+        console.log(pacelar(valor))
+    </script>
+</body>
+
+</html>
