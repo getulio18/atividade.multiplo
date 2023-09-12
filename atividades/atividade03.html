@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 03l</title>
+</head>
+
+<body>
+    <script>
+
+        let Enome = prompt("nome do cachorro:");
+        let Ecor = prompt("cor:");
+        let Epeso = parseFloat(prompt("peso:"));
+        let Eraca = prompt("raça:");
+
+        class cachorro {
+            constructor(nome, cor, peso, raca) {
+                this.nome = nome;
+                this.cor = cor;
+                this.peso = peso;
+                this.raca = raca;
+
+            }
+            descricao = function () {
+                console.log(` ${this.nome} é ${this.cor}, da raça ${this.raca} e peso ${this.peso} `)
+            }
+            doente = function () {
+                console.log(`${this.nome} esta com excesso de magreza!`)
+            }
+            saudavel = function () {
+                console.log(`${this.nome} esta com peso ideal!`)
+            }
+        }
+       
+        const cachorro1 = new cachorro(Enome, Ecor, Epeso, Eraca);
+        cachorro1.descricao()
+        if (cachorro1.peso < 15) {
+           cachorro1.doente();
+        }
+        else {
+            cachorro1.saudavel();
+        }
+
+    </script>
+</body>
+
+</html>
