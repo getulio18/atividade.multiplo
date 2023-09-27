@@ -11,6 +11,22 @@
     <script>
         var entrada = prompt("digite marca da camisa:");
         var quant = parseFloat(prompt("digite quantidade:"));
+        var lista = [];
+
+        //desestruturaçao
+        var saudacao = [
+            "ola, bom dia ",
+            "ola, boa tarde",
+            "ola, boa noite"
+        ]
+        var [manha, tarde, noite] = saudacao;
+        const horas = new Date();
+        var hr = horas.getHours();
+        
+        //otimizando condicionais 
+        if(hr >= 1 && hr <= 12  ? console.log(manha) :
+            (hr >= 18 && hr <= 23) ? console.log(noite) :
+            console.log(tarde));
 
         class camisa {
             constructor(cor, marca, tamanho, quantidade, preco) {
@@ -28,8 +44,13 @@
                 console.log(`Preco unitario:R$ ${this.preco} \n Valor bruto de  ${quant} unidades: R$ ${valor} \n Desconto: R$ ${valorDesc} \n Valor total: R$ ${valorTotal}\n Temos  ${this.quantidade} em estoque `)
             }
 
+
+        }
+        naoEncontrado = function () {
+            console.log(`Nao temos essa marca: ${entrada.toUpperCase()} `);
         }
         var desc = 0;
+        //operador ternario END
         if (quant >= 2 && quant < 5) {
             desc = 0.02;
         }
@@ -45,18 +66,29 @@
         else if (quant >= 20) {
             desc = 0.010;
         }
-        
+
         const camisa1 = new camisa("vermelho", "gucci", "p", 100, 149);
         const camisa2 = new camisa("azul", "prada", "m", 1, 300);
+        const camisa3 = new camisa("bege", "colcci", "g", 155, 127);
+        const camisa4 = new camisa("laraja", "lacoste", "m", 99, 499);
+        //usando spred
+        lista.push(camisa1.preco, camisa2.preco, camisa3.preco, camisa4.preco);
+        console.log(`DESCONTÃO, A PARTIR DE : R$ ${Math.min(...lista)},00`)
+
         if (entrada == camisa1.marca && camisa1.quantidade > 0) {
             camisa1.analiarItem();
         }
         else if (entrada == camisa2.marca && camisa2.quantidade > 0) {
             camisa2.analiarItem();
         }
-        else {
-            console.log(`Nao temos essa marca: ${entrada.toUpperCase()} `)
+
+        else if (entrada == camisa3.marca && camisa3.quantidade > 0) {
+            camisa3.analiarItem();
         }
+        else if (entrada == camisa4.marca && camisa4.quantidade > 0) {
+            camisa4.analiarItem();
+        }
+        else { naoEncontrado(); }
 
     </script>
 </body>
