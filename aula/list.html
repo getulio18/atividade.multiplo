@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frutas</title>
+</head>
+
+<body>
+<!--
+    <ul>
+        <p>lista de frutas</p>
+        <li class="teste">maça</li>
+        <li class="teste">pera</li>
+        <li class="teste">jaca</li>
+        <li class="teste">laranja</li>
+        <li class="teste">manga</li>
+    </ul>
+    <script>
+        let testes = document.querySelector(".teste");
+        console.log(testes)
+        array.forEach(element => {
+            
+        });
+        //for(const teste of testes){
+         //   console.log(teste)
+        //}
+        
+    </script>
+
+    -->
+    <style>
+        .verde{
+            background-color: green;
+        }
+        .azul{
+            background-color: blue;
+        }
+        .vermelho{
+            background-color: red ;
+        }
+    </style>
+    <script>
+        const pessoas= [
+            {idade: 22, nome:"gerson", peso: 68},
+            {idade: 19, nome: "rafael", peso:89},
+        ];
+        let cores = ["azul", "vermelho", "verde"];
+        
+         for(const pessoa of pessoas){
+            
+            let bloco = document.createElement("div");
+            bloco.innerHTML= "<h3>idade: "+pessoa.idade+"</h3>" +
+                            "<p>peso: "+pessoa.peso+"</p>"+
+                            "<p>nome: "+pessoa.nome+"</p>" ;
+           
+            if(bloco.classList.contains("azul")||("vermelho")){
+                bloco.classList.add("verde");
+            }
+            else if(bloco.classList.contains("vermelho")||("verde")){
+                bloco.classList.add("azul");
+            }
+            else{
+                bloco.classList.add("vermelho");
+            }
+            document.body.append(bloco);
+           
+            
+         }
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY</title>
+</head>
+<body>
+    <script>
+        const lista= ["ana", "naiara", "carla", "bruna", "getulio"];
+       
+
+        //add elementos 
+        lista.push("carol")//add no final da lista
+        lista.unshift("jonas") //add no inicio
+
+        //excluir elementos 
+        lista.pop() // exclui ultimo elemento
+        lista.shift() // exclui no inicio
+        
+        //concat junta duas listas
+        const novaLista= lista.concat(["fabio", "pablo"])
+
+        let tamanhoLista = lista.length;
+        for( let index = 0; index < tamanhoLista; index++){
+            console.log(`${index} ${ lista[index]}` )
+        }
+        //join coloca algo entre os elementos 
+        console.log(novaLista.join("\n"))
+    </script>
+</body>
+</html>

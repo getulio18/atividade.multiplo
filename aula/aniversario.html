@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>  
+    <script>
+        
+        const hoje = new Date()
+        const dia = hoje.getDate().toString().padStart(2, '0')
+        const mes = String(hoje.getMonth() + 1).padStart(2, '0')
+        const ano = hoje.getFullYear()
+        
+        
+
+        var diaDigitado = parseInt(prompt("dia: "))
+        var mesDigitado = parseInt(prompt("mes: "))
+        var anoDigitado = parseInt(prompt("ano: "))
+        var anos = ano-anoDigitado;
+        var meses = mes-mesDigitado;
+        var dias = dia-diaDigitado;
+        var dataAtual = `${anos} anos / ${meses}meses / ${dias} dias `
+        console.log(dataAtual)
+
+    </script>
+
+</body>
+
+</html>

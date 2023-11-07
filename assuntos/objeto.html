@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let fruta = {
+            cor : "amarela",
+            nome: "banana",
+            peso: 25
+        };
+        //alterando
+        fruta.nome = "manga"
+        //acessar exemplo: fruta.nome ou fruta.peso
+        console.log("nome: "+fruta. nome+" cor: "+ fruta.cor)*/
+        
+        //objeto com construtor
+        function fruta(cor, peso, nome){
+            this.cor = cor;
+            this.peso = peso;
+            this.nome = nome;
+        }
+        const fruta1 = new fruta("amarela", 25, "manga");
+        const fruta2 = new fruta("verde", 300, "jaca");
+        //console.log("fruta 2: " +fruta2.nome + " / fruta 1: " +fruta1.nome)
+
+        // para cada propriedade no objeto
+        for(const propriedade in fruta1){
+            console.log(fruta1[propriedade])
+        }
+        for(const propriedade in fruta2){
+            console.log(fruta2[propriedade])
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<script>
+function qualEstacao(mes) {
+  const estacoes = {
+    1: "Verão",
+    2: "Verão",
+    3: "Outono",
+    4: "Outono",
+    5: "Outono",
+    6: "Inverno",
+    7: "Inverno",
+    8: "Inverno",
+    9: "Primavera",
+    10: "Primavera",
+    11: "Primavera",
+    12: "Verão",
+  };
+  if (estacoes[mes]) {
+    return estacoes[mes];
+  } else {
+    return "Mês inválido";
+  }
+}
+let mesDigitado = prompt("Digite o número do mês de 1 a 12:");
+let estacao = qualEstacao(parseInt(mesDigitado));
+console.log("A estação do mês " + mesDigitado + " é " + estacao);
+</script>
+</html>

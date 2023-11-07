@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const milisecDia = 86400000
+
+        function DatatoNiver(data1) {
+
+            let dataAtual = new Date();
+            let diasQueFaltam = (data1 - dataAtual) / milisecDia
+            return diasQueFaltam
+        }
+
+        const data1 = new Date("mar 16, 1999");
+        console.log("Faltam " + DatatoNiver(data1) + " dias")
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numeros aleatorios</title>
+</head>
+
+<body>
+    <script>
+        function numeroAleatorio() {
+            //colocar numeros aleatorios entre 20 e 50
+            var aleatorio = Math.random();
+            var intervalo = aleatorio *  50 + 20;
+            var numArredondado = Math.round(intervalo)
+            return numArredondado;
+        }
+
+        function gerarArray(quantidade){
+            const lista = [];
+            
+            for(let i = 0; i < quantidade; i++){
+                const num = numeroAleatorio();
+                lista.push(num);
+               
+            }
+            return lista
+            
+        }
+        function raizQuadrada(arrayNumeros){
+            const arrayRaiz = [];
+            for(let i = 0; i < arrayNumeros.length; i++){
+                var numero = arrayNumeros[i];
+                const raizQuadrada = Math.sqrt(numero);
+                arrayRaiz.push(raizQuadrada.toFixed(1))
+            }
+            return arrayRaiz
+        }
+        console.log(`numero aleatorio: ${numeroAleatorio()}`)
+        var list = gerarArray(5);
+        console.log(`array: ${list}`)
+        console.log(`raiz quadrada de array: ${raizQuadrada(list)}`)
+    </script>
+</body>
+
+</html>

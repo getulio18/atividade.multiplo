@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista</title>
+</head>
+<body>
+    <script>
+        var nomes = [];
+        var nome = prompt("digite um nome ou fim para encerrar!");
+
+        while(nome.toLowerCase() != "fim"){
+            nomes.push(nome);
+            nome = prompt("digite um nome ou fim para encerrar!");
+        }
+
+        console.log("NOMES INCERIDOS!")
+    
+        let tamanhoLista = nomes.length;
+        for( let i = 0; i < tamanhoLista; i++){
+            console.log(`${ nomes[i]}` )
+        }
+
+
+     
+    </script>
+</body>
+</html>

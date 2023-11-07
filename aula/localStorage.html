@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>armazenar</title>
+</head>
+<body>
+    <script>
+        //add item 
+        localStorage.setItem('professor','joao')
+        //localStorage.setItem('tutor','tiago')
+        // acessar valor
+        const nomeProfessor = localStorage.getItem('professor')
+        //percorrer localstorage
+        for(let i = 0; i < localStorage.length; i++){
+            let chave = localStorage.key(i)
+            console.log(chave)
+        }
+        //remover valor de localstorage 
+        localStorage.removeItem('tutor')
+        //limpar tudo localstorage 
+        localStorage.clear()
+        //armazenar array
+        let compras = ['banana', 'maçã','pera']
+        //stringfy coloca na forma ideal json
+        localStorage.setItem('compras', JSON.stringify(compras))
+        //pegando itens 
+        const comprasLs = JSON.parse( localStorage.getItem('compras'))
+        //parse em objeto novamente 
+        //const acompras= JSON.parse(comprasLs)
+        console.log(comprasLs)
+        //console.log(acompras[2])
+
+    </script>
+</body>
+</html>

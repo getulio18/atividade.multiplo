@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var lista = []
+        var cont = 1;
+        
+        var num = parseInt(prompt("digite um numero: "))
+
+        while (cont < num) {
+            lista.push(cont)
+            console.log(lista);
+            cont++
+        }
+        var soma=0
+        for (let i = 0; i < lista.length; i++) {
+            soma += lista[i];
+        }
+        console.log("A soma dos elementos é:", soma);
+    </script>
+</body>
+
+</html>
